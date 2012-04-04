@@ -340,157 +340,40 @@ if __name__ == "__main__":
     #     g = load_grammar(open("a.txt"))
 
     g = load_grammar("""
-        N_VOWEL -> elephant
-        N_VOWEL -> apple
-        
-        N_CONS -> hat
-        N_CONS -> garden
-        N_CONS -> time
-        N_CONS -> flight
-        N_CONS -> banana
-        N_CONS -> boy
-        N_CONS -> man
-        N_CONS -> telescope
-        N_CONS -> sandwich
-        N_CONS -> president
-        N_CONS -> burger
-        N_CONS -> coca-cola
-        N_CONS -> pickle
-        N_CONS -> floor
-        N_CONS -> gratitude
-        
-        N -> N_CONS
-        N -> N_VOWEL
-        
-        N_PL -> flies
-        N_PL -> birds
+        N -> hat
+        N -> elephant
+        N -> garden
+        N -> apple
+        N -> time
+        N -> flight
+        N -> banana
+        N -> flies
+        N -> boy
+        N -> man
+        N -> telescope
 
         NN -> john
         NN -> mary
         NN -> houston
-        NN -> sally
 
-        ADJ_CONS -> giant
-        ADJ_CONS -> red
-        ADJ_CONS -> perplexed
+        ADJ -> giant
+        ADJ -> red
 
-        ADJ_VOWEL -> every
+        D -> the
+        D -> a
+        D -> an
 
-        ADJ -> ADJ_CONS
-        ADJ -> ADJ_VOWEL
-
-        D_CONS -> the
-        D_VOWEL -> the
-        D_PL -> the
-        D_CONS -> a
-        D_VOWEL -> an
-
-        ADV_CONS -> very
-
-        V1_VAL12 -> book
-        V1_F2_VAL12 -> books
-        V2_VAL12 -> booked
-        V3_VAL12 -> booked
-        
-        V1_VAL12 -> eat
-        V1_F2_VAL12 -> eats
-        V2_VAL12 -> ate
-        V3_VAL12 -> eaten
-        
-        V1_VAL23 -> give
-        V1_F2_VAL23 -> gives
-        V2_VAL23 -> gave
-        V3_VAL23 -> given
-       
-        V1_VAL2 -> kiss
-        V1_F2_VAL2 -> kisses
-        V2_VAL2 -> kissed
-        V3_VAL2 -> kissed
-
-        V1_VAL1 -> lie
-        V1_F2_VAL1 -> lies
-        V2_VAL1 -> lay
-        V3_VAL1 -> lain
-
-        V1_VAL2 -> see
-        V1_F2_VAL2 -> sees
-        V2_VAL2 -> saw
-        V3_VAL2 -> seen
-
-        V1_VAL1 -> sigh
-        V1_F2_VAL1 -> sighs
-        V2_VAL1 -> sighed
-        V3_VAL1 -> sighed
-        
-        V1_VAL1 -> sleep
-        V1_F2_VAL1 -> sleeps
-        V1_VAL1 -> slept
-        V1_VAL1 -> slept
-        
-        V1_VAL1 -> think
-        V1_F2_VAL1 -> thinks
-        V2_VAL1 -> thought
-        V3_VAL1 -> thought
-
-        V1_VAL12 -> want
-        V1_F2_VAL12 -> wants
-        V2_VAL12 -> wanted
-        V3_VAL12 -> wanted
-
-        V1_VAL1 -> walk
-        V1_F2_VAL1 -> walks
-        V2_VAL1 -> walked
-        V3_VAL1 -> walked
-      
-
-        V1_VAL1 -> V1_VAL12
-        V1_VAL1 -> V1_VAL123
-        V1_VAL1 -> V1_VAL13
-        
-        V1_VAL2 -> V1_VAL12
-        V1_VAL2 -> V1_VAL23
-        V1_VAL2 -> V1_VAL123
-
-        V1_VAL3 -> V1_VAL13
-        V1_VAL3 -> V1_VAL23
-        V1_VAL3 -> V1_VAL123
-
-        V1_F2_VAL1 -> V1_F2_VAL12
-        V1_F2_VAL1 -> V1_F2_VAL123
-        V1_F2_VAL1 -> V1_F2_VAL13
-        
-        V1_F2_VAL2 -> V1_F2_VAL12
-        V1_F2_VAL2 -> V1_F2_VAL23
-        V1_F2_VAL2 -> V1_F2_VAL123
-
-        V1_F2_VAL3 -> V1_F2_VAL13
-        V1_F2_VAL3 -> V1_F2_VAL23
-        V1_F2_VAL3 -> V1_F2_VAL123
-
-        V2_VAL1 -> V2_VAL12
-        V2_VAL1 -> V2_VAL123
-        V2_VAL1 -> V2_VAL13
-        
-        V2_VAL2 -> V2_VAL12
-        V2_VAL2 -> V2_VAL23
-        V2_VAL2 -> V2_VAL123
-
-        V2_VAL3 -> V2_VAL13
-        V2_VAL3 -> V2_VAL23
-        V2_VAL3 -> V2_VAL123
-
-        V3_VAL1 -> V3_VAL12
-        V3_VAL1 -> V3_VAL123
-        V3_VAL1 -> V3_VAL13
-        
-        V3_VAL2 -> V3_VAL12
-        V3_VAL2 -> V3_VAL23
-        V3_VAL2 -> V3_VAL123
-
-        V3_VAL3 -> V3_VAL13
-        V3_VAL3 -> V3_VAL23
-        V3_VAL3 -> V3_VAL123
-
+        V -> book
+        V -> books
+        V -> eat
+        V -> eats
+        V -> sleep
+        V -> sleeps
+        V -> give
+        V -> gives
+        V -> walk
+        V -> walks
+        V -> saw
 
         P -> with
         P -> in
@@ -498,118 +381,29 @@ if __name__ == "__main__":
         P -> at
         P -> through
 
-        CONJ -> and
-        CONJ -> or
-        COMMA -> ,
-
         PR -> he
         PR -> she
-        PR_POS -> his
-        PR_POS -> her
-        PR_DEF -> that
-        PR_DEF -> who
-        PR_Q -> that
-
-        QW -> what
-        QW -> when
-        QW -> where
-        QW -> why
-
-        ADV -> ADV_CONS
-        ADV -> ADV_VOWEL
-        ADV_G_CONS -> ADV_CONS
-        ADV_G_VOWEL -> ADV_VOWEL
-        ADV_G_CONS -> ADV_G_CONS ADV
-        ADV_G_VOWEL -> ADV_G_VOWEL ADV
-
-        ADJ_G_CONS -> ADJ_CONS   
-        ADJ_G_VOWEL -> ADJ_VOWEL
-        
-        ADJ_G_CONS -> ADV_G_CONS ADJ
-        ADJ_G_VOWEL -> ADV_G_VOWEL ADJ
-
-        ADJ_G -> ADJ_G_CONS
-        ADJ_G -> ADJ_G_VOWEL
-        ADJ_G_CONS -> ADJ_G_CONS ADJ_G
-        ADJ_G_VOWEL -> ADJ_G_VOWEL ADJ_G
+        PR -> his
+        PR -> her
 
         NP -> NN
-        
-        NP -> D_VOWEL N_VOWEL
-        NP -> D_CONS N_CONS
-        
-        NP_PL -> D_PL N_PL
-
-        NP -> D_VOWEL ADJ_G_VOWEL N
-        NP -> D_CONS ADJ_G_CONS N
-        NP -> ADJ_G N
-        
-        NP_PL -> D_PL ADJ_G N_PL
-        NP_PL -> ADJ_G N_PL
-
+        NP -> D N
+        NP -> D ADJ N
         NP -> PR
-        NP -> PR
-        NP -> PR_POS N
-        NP_PL -> PR_POS N_PL
+        NP -> PR N
         NP -> NP PP
-        NP_PL -> NP_PL PP
-
-        NP_ENUM -> NP COMMA NP
-        NP_ENUM -> NP_ENUM COMMA NP
-        NP -> NP CONJ NP
-        NP -> NP_ENUM CONJ NP
 
         PP -> P NP
-        PP -> P NP_PL
 
-        VP -> V1_VAL1
-        VP -> V2_VAL1
-        VP_F2 -> V1_F2_VAL1
-        VP_F2 -> V2_VAL1
-
-        VP -> V1_VAL2 NP
-        VP -> V2_VAL2 NP
-        VP_F2 -> V1_F2_VAL2 NP
-        VP_F2 -> V2_VAL2 NP
-
-        VP -> V1_VAL3 NP NP
-        VP -> V2_VAL3 NP NP
-        VP_F2 -> V1_F2_VAL3 NP NP
-        VP_F2 -> V2_VAL3 NP NP
-  
-        VP_ENUM -> VP COMMA VP
-        VP_ENUM -> VP_ENUM COMMA VP
-        VP -> VP CONJ VP
-        VP -> VP_ENUM CONJ VP
-        
-        VP_F2_ENUM -> VP_F2 COMMA CP
-        VP_F2_ENUM -> VP_F2_ENUM COMMA VP_F2
-        VP_F2 -> VP_F2 CONJ VP_F2
-        VP_F2 -> VP_F2_ENUM CONJ VP_F2
-
+        VP -> V
+        VP -> V NP
+        VP -> V NP NP
         VP -> VP PP
-        VP_F2 -> VP_F2 PP
 
-        VP -> V1_VAL1 PR_Q S
-        VP -> V2_VAL1 PR_Q S
-        VP_F2 -> V1_F2_VAL1 PR_Q S
-        VP_F2 -> V2_VAL1 PR_Q S
+        S -> NP VP
+        S -> VP
 
-        AV -> do
-        AV_F2 -> does
-
-        S -> NP VP_F2
-        S -> NP_PL VP
-        S -> QW AV_F2 NP VP
-        S -> QW AV NP_PL VP
-
-        NP -> NP PR_DEF VP_F2
-        NP_PL -> NP_PL DEF VP
-        NP -> NP PR_DEF NP VP_F2
-        NP -> NP PR_DEF NP_PL VP
-        NP_PL -> NP PR_DEF NP VP_F2
-        NP_PL -> NP_PL PR_DEF NP_PL VP
-    """.splitlines())
+      """.splitlines())
     
     def parse_and_print(g, s):
       try:
@@ -622,48 +416,9 @@ if __name__ == "__main__":
       except ValueError as e:
         print "%s -> %s"%(s, e)
 
-#1
-    parse_and_print(g, "john eat")
-    parse_and_print(g, "he eats")
-    parse_and_print(g, "the president eats")
-    parse_and_print(g, "john eats")
-    parse_and_print(g, "his walks with he hat")
-    parse_and_print(g, "he walks with his hat")
-
-#2
-    parse_and_print(g, "the president sighed")
-    parse_and_print(g, "the president thought that a sandwich sighed")
-    parse_and_print(g, "the president thought that the president thought that a sandwich sighed")
-
-#3
-    parse_and_print(g, "sally ate a sandwich")
-    parse_and_print(g, "sally ate a sandwich , a burger and a coca-cola")
-    parse_and_print(g, "sally and the president wanted and ate a sandwich")
-    parse_and_print(g, "the very very very very perplexed president ate a sandwich")
-    parse_and_print(g, "every sandwich with a pickle on the floor wanted a president")
-#4
-    parse_and_print(g, "an apple lies")
-    parse_and_print(g, "a apple lies")
-    parse_and_print(g, "a red apple lies")
-    parse_and_print(g, "an red apple lies")
-    parse_and_print(g, "the red apple lies")
-
-#5
-    parse_and_print(g, "the pickle kissed the president that ate the sandwich")
-    parse_and_print(g, "the pickle kissed the sandwich that the president ate")
-    parse_and_print(g, "the pickle kissed the sandwich that the president thought that Sally ate")
-    parse_and_print(g, "what does the president think")
-    parse_and_print(g, "what does the president think that sally ate")
-
-#7
-    parse_and_print(g, "a red apple sleeps in the garden")
-    parse_and_print(g, "a red apple sleeps he red apple")
-    parse_and_print(g, "an apple gives")
-    parse_and_print(g, "an apple gives a gratitude")
-
-#    parse_and_print(g, "book the flight through houston")
-#    parse_and_print(g, "john saw the boy with the telescope")
-#    parse_and_print(g, "john sleeps")
-#    parse_and_print(g, "he gives mary his hat")
-#    parse_and_print(g, "an elephant walks in the garden")
-#    parse_and_print(g, "a giant man eats a giant apple")
+    parse_and_print(g, "book the flight through houston")
+    parse_and_print(g, "john saw the boy with the telescope")
+    parse_and_print(g, "john sleeps")
+    parse_and_print(g, "he gives mary his hat")
+    parse_and_print(g, "an elephant walks in the garden")
+    parse_and_print(g, "a giant man eats a giant apple")
