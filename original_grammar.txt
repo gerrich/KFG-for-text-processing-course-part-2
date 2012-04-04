@@ -1,0 +1,109 @@
+N -> hat
+N -> bird
+N -> birds
+N -> elephant
+N -> garden
+N -> apple
+N -> time
+N -> flight
+N -> banana
+N -> flies
+N -> boy
+N -> man
+N -> telescope
+N -> telescope
+N -> sandwich
+N -> president
+N -> burger
+N -> coca-cola
+N -> pickle
+N -> floor
+N -> table
+N -> gratitude
+N -> fool       
+
+
+NN -> john
+NN -> mary
+NN -> houston
+NN -> sally
+
+ADJ -> giant
+ADJ -> red
+ADJ -> perplexed
+ADJ -> every
+ADJ -> awesome
+
+D -> the
+D -> a
+D -> an
+
+V -> book
+V -> books
+V -> booked
+V -> eat
+V -> eats
+V -> ate
+V -> sleep
+V -> sleeps
+V -> slept
+V -> give
+V -> gives
+V -> gave
+V -> kiss
+V -> kisses
+V -> kissed
+V -> lie
+V -> lies
+V -> lay
+V -> see
+V -> sees
+V -> saw
+V -> sigh
+V -> sighs
+V -> sighed
+V -> sleep
+V -> sleeps
+V -> slept
+V -> thik
+V -> thiks
+V -> thought
+V -> walk
+V -> walks
+V -> walked
+V -> want
+V -> wants
+V -> wanted
+V -> is
+V -> are
+
+P -> with
+P -> in
+P -> on
+P -> at
+P -> through
+P -> about
+
+PR -> he
+PR -> she
+PR -> his
+PR -> her
+
+NP -> NN
+NP -> D N
+NP -> D ADJ N
+NP -> PR
+NP -> PR N
+NP -> NP PP
+
+PP -> P NP
+
+VP -> V
+VP -> V NP
+VP -> V NP NP
+VP -> VP PP
+
+S -> NP VP
+S -> VP
+
+

@@ -91,8 +91,8 @@
         
         V1_VAL1 -> sleep
         V1_F2_VAL1 -> sleeps
-цV1_VAL1 -> slept
-        V1_VAL1 -> slept
+        V2_VAL1 -> slept
+        V3_VAL1 -> slept
         
         V1_VAL1 -> think
         V1_F2_VAL1 -> thinks
