@@ -385,61 +385,110 @@ if __name__ == "__main__":
 
         ADV_CONS -> very
 
-        V1 -> book
-        V1_F2 -> books
-        V2 -> booked
-        V3 -> booked
+        V1_VAL12 -> book
+        V1_F2_VAL12 -> books
+        V2_VAL12 -> booked
+        V3_VAL12 -> booked
         
-        V1 -> eat
-        V1_F2 -> eats
-        V2 -> ate
-        V3 -> eaten
+        V1_VAL12 -> eat
+        V1_F2_VAL12 -> eats
+        V2_VAL12 -> ate
+        V3_VAL12 -> eaten
         
-        V1 -> give
-        V1_F2 -> gives
-        V2 -> gave
-        V3 -> given
+        V1_VAL23 -> give
+        V1_F2_VAL23 -> gives
+        V2_VAL23 -> gave
+        V3_VAL23 -> given
        
-        V1 -> kiss
-        V1_F2 -> kisses
-        V2 -> kissed
-        V3 -> kissed
+        V1_VAL2 -> kiss
+        V1_F2_VAL2 -> kisses
+        V2_VAL2 -> kissed
+        V3_VAL2 -> kissed
 
-        V1 -> lie
-        V1_F2 -> lies
-        V2 -> lay
-        V3 -> lain
+        V1_VAL1 -> lie
+        V1_F2_VAL1 -> lies
+        V2_VAL1 -> lay
+        V3_VAL1 -> lain
 
-        V1 -> see
-        V1_F2 -> sees
-        V2 -> saw
-        V3 -> seen
+        V1_VAL2 -> see
+        V1_F2_VAL2 -> sees
+        V2_VAL2 -> saw
+        V3_VAL2 -> seen
 
-        V1 -> sigh
-        V1_F2 -> sighs
-        V2 -> sighed
-        V3 -> sighed
+        V1_VAL1 -> sigh
+        V1_F2_VAL1 -> sighs
+        V2_VAL1 -> sighed
+        V3_VAL1 -> sighed
         
-        V1 -> sleep
-        V1_F2 -> sleeps
-        V1 -> slept
-        V1 -> slept
+        V1_VAL1 -> sleep
+        V1_F2_VAL1 -> sleeps
+        V1_VAL1 -> slept
+        V1_VAL1 -> slept
         
-        V1 -> think
-        V1_F2 -> thinks
-        V2 -> thought
-        V3 -> thought
+        V1_VAL1 -> think
+        V1_F2_VAL1 -> thinks
+        V2_VAL1 -> thought
+        V3_VAL1 -> thought
 
-        V1 -> want
-        V1_F2 -> wants
-        V2 -> wanted
-        V3 -> wanted
+        V1_VAL12 -> want
+        V1_F2_VAL12 -> wants
+        V2_VAL12 -> wanted
+        V3_VAL12 -> wanted
 
-        V1 -> walk
-        V1_F2 -> walks
-        V2 -> walked
-        V3 -> walked
+        V1_VAL1 -> walk
+        V1_F2_VAL1 -> walks
+        V2_VAL1 -> walked
+        V3_VAL1 -> walked
+      
+
+        V1_VAL1 -> V1_VAL12
+        V1_VAL1 -> V1_VAL123
+        V1_VAL1 -> V1_VAL13
         
+        V1_VAL2 -> V1_VAL12
+        V1_VAL2 -> V1_VAL23
+        V1_VAL2 -> V1_VAL123
+
+        V1_VAL3 -> V1_VAL13
+        V1_VAL3 -> V1_VAL23
+        V1_VAL3 -> V1_VAL123
+
+        V1_F2_VAL1 -> V1_F2_VAL12
+        V1_F2_VAL1 -> V1_F2_VAL123
+        V1_F2_VAL1 -> V1_F2_VAL13
+        
+        V1_F2_VAL2 -> V1_F2_VAL12
+        V1_F2_VAL2 -> V1_F2_VAL23
+        V1_F2_VAL2 -> V1_F2_VAL123
+
+        V1_F2_VAL3 -> V1_F2_VAL13
+        V1_F2_VAL3 -> V1_F2_VAL23
+        V1_F2_VAL3 -> V1_F2_VAL123
+
+        V2_VAL1 -> V2_VAL12
+        V2_VAL1 -> V2_VAL123
+        V2_VAL1 -> V2_VAL13
+        
+        V2_VAL2 -> V2_VAL12
+        V2_VAL2 -> V2_VAL23
+        V2_VAL2 -> V2_VAL123
+
+        V2_VAL3 -> V2_VAL13
+        V2_VAL3 -> V2_VAL23
+        V2_VAL3 -> V2_VAL123
+
+        V3_VAL1 -> V3_VAL12
+        V3_VAL1 -> V3_VAL123
+        V3_VAL1 -> V3_VAL13
+        
+        V3_VAL2 -> V3_VAL12
+        V3_VAL2 -> V3_VAL23
+        V3_VAL2 -> V3_VAL123
+
+        V3_VAL3 -> V3_VAL13
+        V3_VAL3 -> V3_VAL23
+        V3_VAL3 -> V3_VAL123
+
 
         P -> with
         P -> in
@@ -511,22 +560,22 @@ if __name__ == "__main__":
         PP -> P NP
         PP -> P NP_PL
 
-        VP -> V1
-        VP -> V2
-        VP_F2 -> V1_F2
-        VP_F2 -> V2
+        VP -> V1_VAL1
+        VP -> V2_VAL1
+        VP_F2 -> V1_F2_VAL1
+        VP_F2 -> V2_VAL1
 
-        VP -> V1 NP
-        VP -> V2 NP
-        VP_F2 -> V1_F2 NP
-        VP_F2 -> V2 NP
+        VP -> V1_VAL2 NP
+        VP -> V2_VAL2 NP
+        VP_F2 -> V1_F2_VAL2 NP
+        VP_F2 -> V2_VAL2 NP
 
-        VP -> V1 NP NP
-        VP -> V2 NP NP
-        VP_F2 -> V1_F2 NP NP
-        VP_F2 -> V2 NP NP
+        VP -> V1_VAL3 NP NP
+        VP -> V2_VAL3 NP NP
+        VP_F2 -> V1_F2_VAL3 NP NP
+        VP_F2 -> V2_VAL3 NP NP
   
-        VP_ENUM -> VP COMMA CP
+        VP_ENUM -> VP COMMA VP
         VP_ENUM -> VP_ENUM COMMA VP
         VP -> VP CONJ VP
         VP -> VP_ENUM CONJ VP
@@ -539,17 +588,16 @@ if __name__ == "__main__":
         VP -> VP PP
         VP_F2 -> VP_F2 PP
 
-        VP -> V1 PR_Q S
-        VP -> V2 PR_Q S
-        VP_F2 -> V1_F2 PR_Q S
-        VP_F2 -> V2 PR_Q S
+        VP -> V1_VAL1 PR_Q S
+        VP -> V2_VAL1 PR_Q S
+        VP_F2 -> V1_F2_VAL1 PR_Q S
+        VP_F2 -> V2_VAL1 PR_Q S
 
         AV -> do
         AV_F2 -> does
 
         S -> NP VP_F2
         S -> NP_PL VP
-        S -> VP
         S -> QW AV_F2 NP VP
         S -> QW AV NP_PL VP
 
