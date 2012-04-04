@@ -395,46 +395,51 @@ if __name__ == "__main__":
         V2 -> ate
         V3 -> eaten
         
-        V1 -> want
-        V1_F2 -> wants
-        V2 -> wanted
-        V3 -> wanted
-
-        V1 -> sleep
-        V1_F2 -> sleeps
-        V1 -> slept
-        V1 -> slept
-        
         V1 -> give
         V1_F2 -> gives
         V2 -> gave
         V3 -> given
-        
+       
+        V1 -> kiss
+        V1_F2 -> kisses
+        V2 -> kissed
+        V3 -> kissed
+
         V1 -> lie
         V1_F2 -> lies
         V2 -> lay
         V3 -> lain
 
-        V1 -> think
-        V1_F2 -> thinks
-        V2 -> thought
-        V3 -> thought
+        V1 -> see
+        V1_F2 -> sees
+        V2 -> saw
+        V3 -> seen
 
         V1 -> sigh
         V1_F2 -> sighs
         V2 -> sighed
         V3 -> sighed
         
+        V1 -> sleep
+        V1_F2 -> sleeps
+        V1 -> slept
+        V1 -> slept
+        
+        V1 -> think
+        V1_F2 -> thinks
+        V2 -> thought
+        V3 -> thought
+
+        V1 -> want
+        V1_F2 -> wants
+        V2 -> wanted
+        V3 -> wanted
+
         V1 -> walk
         V1_F2 -> walks
         V2 -> walked
         V3 -> walked
         
-        V1 -> see
-        V1_F2 -> sees
-        V2 -> saw
-        V3 -> seen
-
 
         P -> with
         P -> in
@@ -450,7 +455,14 @@ if __name__ == "__main__":
         PR -> she
         PR_POS -> his
         PR_POS -> her
+        PR_DEF -> that
+        PR_DEF -> who
         PR_Q -> that
+
+        QW -> what
+        QW -> when
+        QW -> where
+        QW -> why
 
         ADV -> ADV_CONS
         ADV -> ADV_VOWEL
@@ -532,9 +544,21 @@ if __name__ == "__main__":
         VP_F2 -> V1_F2 PR_Q S
         VP_F2 -> V2 PR_Q S
 
+        AV -> do
+        AV_F2 -> does
+
         S -> NP VP_F2
         S -> NP_PL VP
         S -> VP
+        S -> QW AV_F2 NP VP
+        S -> QW AV NP_PL VP
+
+        NP -> NP PR_DEF VP_F2
+        NP_PL -> NP_PL DEF VP
+        NP -> NP PR_DEF NP VP_F2
+        NP -> NP PR_DEF NP_PL VP
+        NP_PL -> NP PR_DEF NP VP_F2
+        NP_PL -> NP_PL PR_DEF NP_PL VP
     """.splitlines())
     
     def parse_and_print(g, s):
@@ -571,6 +595,13 @@ if __name__ == "__main__":
     parse_and_print(g, "a red apple lies")
     parse_and_print(g, "an red apple lies")
     parse_and_print(g, "the red apple lies")
+
+#5
+    parse_and_print(g, "the pickle kissed the president that ate the sandwich")
+    parse_and_print(g, "the pickle kissed the sandwich that the president ate")
+    parse_and_print(g, "the pickle kissed the sandwich that the president thought that Sally ate")
+    parse_and_print(g, "what does the president think")
+    parse_and_print(g, "what does the president think that sally ate")
 
 #    parse_and_print(g, "book the flight through houston")
 #    parse_and_print(g, "john saw the boy with the telescope")
