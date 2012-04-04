@@ -1,0 +1,284 @@
+        
+        N_VOWEL -> elephant
+        N_VOWEL -> apple
+        
+        N_CONS -> hat
+        N_CONS -> bird
+        N_CONS -> garden
+        N_CONS -> time
+        N_CONS -> flight
+        N_CONS -> banana
+        N_CONS -> boy
+        N_CONS -> man
+        N_CONS -> telescope
+        N_CONS -> sandwich
+        N_CONS -> president
+        N_CONS -> burger
+        N_CONS -> coca-cola
+        N_CONS -> pickle
+        N_CONS -> floor
+        N_CONS -> table
+        N_CONS -> gratitude
+        N_CONS -> fool       
+ 
+        N -> N_CONS
+        N -> N_VOWEL
+        
+        N_PL -> flies
+        N_PL -> birds
+        N_PL -> men
+
+        NN -> john
+        NN -> mary
+        NN -> houston
+        NN -> sally
+
+        ADJ_CONS -> giant
+        ADJ_CONS -> red
+        ADJ_CONS -> perplexed
+        
+        ADJ_VOWEL -> every
+        ADJ_VOWEL -> awesome
+
+        ADJ -> ADJ_CONS
+        ADJ -> ADJ_VOWEL
+
+        D_CONS -> the
+        D_VOWEL -> the
+        D_PL -> the
+        D_CONS -> a
+        D_VOWEL -> an
+
+        ADV_CONS -> very
+
+        V1_VAL12 -> are
+        V1_F2_VAL12 -> is
+
+        V1_VAL12 -> book
+        V1_F2_VAL12 -> books
+        V2_VAL12 -> booked
+        V3_VAL12 -> booked
+        
+        V1_VAL12 -> eat
+        V1_F2_VAL12 -> eats
+        V2_VAL12 -> ate
+        V3_VAL12 -> eaten
+        
+        V1_VAL23 -> give
+        V1_F2_VAL23 -> gives
+        V2_VAL23 -> gave
+        V3_VAL23 -> given
+       
+        V1_VAL2 -> kiss
+        V1_F2_VAL2 -> kisses
+        V2_VAL2 -> kissed
+        V3_VAL2 -> kissed
+
+        V1_VAL1 -> lie
+        V1_F2_VAL1 -> lies
+        V2_VAL1 -> lay
+        V3_VAL1 -> lain
+
+        V1_VAL12 -> see
+        V1_F2_VAL12 -> sees
+        V2_VAL12 -> saw
+        V3_VAL12 -> seen
+
+        V1_VAL1 -> sigh
+        V1_F2_VAL1 -> sighs
+        V2_VAL1 -> sighed
+        V3_VAL1 -> sighed
+        
+        V1_VAL1 -> sleep
+        V1_F2_VAL1 -> sleeps
+цV1_VAL1 -> slept
+        V1_VAL1 -> slept
+        
+        V1_VAL1 -> think
+        V1_F2_VAL1 -> thinks
+        V2_VAL1 -> thought
+        V3_VAL1 -> thought
+
+        V1_VAL12 -> want
+        V1_F2_VAL12 -> wants
+        V2_VAL12 -> wanted
+        V3_VAL12 -> wanted
+
+        V1_VAL1 -> walk
+        V1_F2_VAL1 -> walks
+        V2_VAL1 -> walked
+        V3_VAL1 -> walked
+      
+
+        V1_VAL1 -> V1_VAL12
+        V1_VAL1 -> V1_VAL123
+        V1_VAL1 -> V1_VAL13
+        
+        V1_VAL2 -> V1_VAL12
+        V1_VAL2 -> V1_VAL23
+        V1_VAL2 -> V1_VAL123
+
+        V1_VAL3 -> V1_VAL13
+        V1_VAL3 -> V1_VAL23
+        V1_VAL3 -> V1_VAL123
+
+        V1_F2_VAL1 -> V1_F2_VAL12
+        V1_F2_VAL1 -> V1_F2_VAL123
+        V1_F2_VAL1 -> V1_F2_VAL13
+        
+        V1_F2_VAL2 -> V1_F2_VAL12
+        V1_F2_VAL2 -> V1_F2_VAL23
+        V1_F2_VAL2 -> V1_F2_VAL123
+
+        V1_F2_VAL3 -> V1_F2_VAL13
+        V1_F2_VAL3 -> V1_F2_VAL23
+        V1_F2_VAL3 -> V1_F2_VAL123
+
+        V2_VAL1 -> V2_VAL12
+        V2_VAL1 -> V2_VAL123
+        V2_VAL1 -> V2_VAL13
+        
+        V2_VAL2 -> V2_VAL12
+        V2_VAL2 -> V2_VAL23
+        V2_VAL2 -> V2_VAL123
+
+        V2_VAL3 -> V2_VAL13
+        V2_VAL3 -> V2_VAL23
+        V2_VAL3 -> V2_VAL123
+
+        V3_VAL1 -> V3_VAL12
+        V3_VAL1 -> V3_VAL123
+        V3_VAL1 -> V3_VAL13
+        
+        V3_VAL2 -> V3_VAL12
+        V3_VAL2 -> V3_VAL23
+        V3_VAL2 -> V3_VAL123
+
+        V3_VAL3 -> V3_VAL13
+        V3_VAL3 -> V3_VAL23
+        V3_VAL3 -> V3_VAL123
+
+
+        P -> with
+        P -> in
+        P -> on
+        P -> at
+        P -> through
+        P -> about
+
+        CONJ -> and
+        CONJ -> or
+        COMMA -> ,
+
+        PR -> he
+        PR -> she
+        PR_POS -> his
+        PR_POS -> her
+        PR_DEF -> that
+        PR_DEF -> who
+        PR_Q -> that
+        PR_Q -> bacause
+
+        QW -> what
+        QW -> when
+        QW -> where
+        QW -> why
+
+        ADV -> ADV_CONS
+        ADV -> ADV_VOWEL
+        ADV_G_CONS -> ADV_CONS
+        ADV_G_VOWEL -> ADV_VOWEL
+        ADV_G_CONS -> ADV_G_CONS ADV
+        ADV_G_VOWEL -> ADV_G_VOWEL ADV
+
+        ADJ_G_CONS -> ADJ_CONS   
+        ADJ_G_VOWEL -> ADJ_VOWEL
+        
+        ADJ_G_CONS -> ADV_G_CONS ADJ
+        ADJ_G_VOWEL -> ADV_G_VOWEL ADJ
+
+        ADJ_G -> ADJ_G_CONS
+        ADJ_G -> ADJ_G_VOWEL
+        ADJ_G_CONS -> ADJ_G_CONS ADJ_G
+        ADJ_G_VOWEL -> ADJ_G_VOWEL ADJ_G
+
+        NP_SG -> NN
+        
+        NP_SG -> D_VOWEL N_VOWEL
+        NP_SG -> D_CONS N_CONS
+        
+        NP_PL -> D_PL N_PL
+
+        NP_SG -> D_VOWEL ADJ_G_VOWEL N
+        NP_SG -> D_CONS ADJ_G_CONS N
+        NP_SG -> ADJ_G N
+        
+        NP_PL -> D_PL ADJ_G N_PL
+        NP_PL -> ADJ_G N_PL
+
+        NP_SG -> PR
+        NP_SG -> PR
+        NP_SG -> PR_POS N
+        NP_PL -> PR_POS N_PL
+        NP_SG -> NP_SG PP
+        NP_PL -> NP_PL PP
+
+        NP_ENUM -> NP COMMA NP
+        NP_ENUM -> NP_ENUM COMMA NP
+        NP_PL -> NP CONJ NP
+        NP_PL -> NP_ENUM CONJ NP
+
+        NP -> NP_SG
+        NP -> NP_PL
+
+        PP -> P NP
+
+        VP -> V1_VAL1
+        VP -> V2_VAL1
+        VP_F2 -> V1_F2_VAL1
+        VP_F2 -> V2_VAL1
+
+
+        VP -> V1_VAL2 NP
+        VP -> V2_VAL2 NP
+        VP_F2 -> V1_F2_VAL2 NP
+        VP_F2 -> V2_VAL2 NP
+
+        VP -> V1_VAL3 NP NP
+        VP -> V2_VAL3 NP NP
+        VP_F2 -> V1_F2_VAL3 NP NP
+        VP_F2 -> V2_VAL3 NP NP
+  
+        VP_ENUM -> VP COMMA VP
+        VP_ENUM -> VP_ENUM COMMA VP
+        VP -> VP CONJ VP
+        VP -> VP_ENUM CONJ VP
+        
+        VP_F2_ENUM -> VP_F2 COMMA VP_F2
+        VP_F2_ENUM -> VP_F2_ENUM COMMA VP_F2
+        VP_F2 -> VP_F2 CONJ VP_F2
+        VP_F2 -> VP_F2_ENUM CONJ VP_F2
+
+        VP -> VP PP
+        VP_F2 -> VP_F2 PP
+
+        VP -> V1_VAL1 PR_Q S
+        VP -> V2_VAL1 PR_Q S
+        VP_F2 -> V1_F2_VAL1 PR_Q S
+        VP_F2 -> V2_VAL1 PR_Q S
+
+        AV -> do
+        AV_F2 -> does
+
+        S -> NP_SG VP_F2
+        S -> NP_PL VP
+        S -> QW AV_F2 NP_SG VP
+        S -> QW AV NP_PL VP
+
+        NP_SG -> NP_SG PR_DEF VP_F2
+        NP_PL -> NP_PL DEF VP
+        NP_SG -> NP_SG PR_DEF NP_SG VP_F2
+        NP_SG -> NP_SG PR_DEF NP_PL VP
+        NP_PL -> NP_SG PR_DEF NP_SG VP_F2
+        NP_PL -> NP_PL PR_DEF NP_PL VP
+

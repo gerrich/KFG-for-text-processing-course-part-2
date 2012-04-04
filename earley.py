@@ -357,11 +357,13 @@ if __name__ == "__main__":
         N_CONS -> coca-cola
         N_CONS -> pickle
         N_CONS -> floor
+        N_CONS -> gratitude
         
         N -> N_CONS
         N -> N_VOWEL
         
         N_PL -> flies
+        N_PL -> birds
 
         NN -> john
         NN -> mary
@@ -622,6 +624,8 @@ if __name__ == "__main__":
 
 #1
     parse_and_print(g, "john eat")
+    parse_and_print(g, "he eats")
+    parse_and_print(g, "the president eats")
     parse_and_print(g, "john eats")
     parse_and_print(g, "his walks with he hat")
     parse_and_print(g, "he walks with his hat")
@@ -650,6 +654,12 @@ if __name__ == "__main__":
     parse_and_print(g, "the pickle kissed the sandwich that the president thought that Sally ate")
     parse_and_print(g, "what does the president think")
     parse_and_print(g, "what does the president think that sally ate")
+
+#7
+    parse_and_print(g, "a red apple sleeps in the garden")
+    parse_and_print(g, "a red apple sleeps he red apple")
+    parse_and_print(g, "an apple gives")
+    parse_and_print(g, "an apple gives a gratitude")
 
 #    parse_and_print(g, "book the flight through houston")
 #    parse_and_print(g, "john saw the boy with the telescope")
