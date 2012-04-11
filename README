@@ -1,0 +1,19 @@
+./earley.py - original earley parser algorithm & visualization tools
+
+grammar.txt - my grammar that covers linguistic features listed on http://school-wiki.yandex.ru/Courses/Spring2012/Linguistics2
+original_grammar.txt - original grammar from earley.py extented with new words from test cases 
+
+tests:
+N_ok - good examples that should be parsed well
+N_fail - incorrect examples that shuldn't be parsed
+./test.py - test script for grammars. - tries to parse all sentenses in N_ok/N_fail files, counts number of missing results and prints out sentences with unexpected results.
+
+to test grammar.txt run:
+# ./test.py 
+or
+# ./test.py grammar.txt
+
+to test orogonal grammar:
+# ./test.py original_grammar.txt
+
+
