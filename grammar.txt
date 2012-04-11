@@ -26,7 +26,6 @@
         
         N_PL -> flies
         N_PL -> birds
-        N_PL -> men
 
         NN -> john
         NN -> mary
@@ -69,6 +68,11 @@
         V2_VAL23 -> gave
         V3_VAL23 -> given
        
+        V1_VAL2 -> hate
+        V1_F2_VAL2 -> hates
+        V2_VAL2 -> hated
+        V3_VAL2 -> hated
+       
         V1_VAL2 -> kiss
         V1_F2_VAL2 -> kisses
         V2_VAL2 -> kissed
@@ -78,6 +82,11 @@
         V1_F2_VAL1 -> lies
         V2_VAL1 -> lay
         V3_VAL1 -> lain
+
+        V1_VAL2 -> like
+        V1_F2_VAL2 -> likes
+        V2_VAL2 -> liked
+        V3_VAL2 -> liked
 
         V1_VAL12 -> see
         V1_F2_VAL12 -> sees
@@ -233,16 +242,29 @@
 
         PP -> P NP
 
+        V1_VAL1 -> V1_VAL1 CONJ V1_VAL1
+        V1_VAL2 -> V1_VAL2 CONJ V1_VAL2
+        V1_VAL3 -> V1_VAL3 CONJ V1_VAL3
+        V1_F2_VAL1 -> V1_F2_VAL1 CONJ V1_F2_VAL1
+        V1_F2_VAL2 -> V1_F2_VAL2 CONJ V1_F2_VAL2
+        V1_F2_VAL3 -> V1_F2_VAL3 CONJ V1_F2_VAL3
+        V2_VAL1 -> V2_VAL1 CONJ V2_VAL1
+        V2_VAL2 -> V2_VAL2 CONJ V2_VAL2
+        V2_VAL3 -> V2_VAL3 CONJ V2_VAL3
+
         VP -> V1_VAL1
         VP -> V2_VAL1
         VP_F2 -> V1_F2_VAL1
         VP_F2 -> V2_VAL1
 
-
         VP -> V1_VAL2 NP
         VP -> V2_VAL2 NP
         VP_F2 -> V1_F2_VAL2 NP
         VP_F2 -> V2_VAL2 NP
+        VP_VAL1 -> V1_VAL2
+        VP_VAL1 -> V2_VAL2
+        VP_F2_VAL1 -> V1_F2_VAL2
+        VP_F2_VAL1 -> V2_VAL2
 
         VP -> V1_VAL3 NP NP
         VP -> V2_VAL3 NP NP
@@ -274,9 +296,11 @@
         S -> NP_PL VP
         S -> QW AV_F2 NP_SG VP
         S -> QW AV NP_PL VP
+        S -> QW AV_F2 NP_SG VP_VAL1
+        S -> QW AV NP_PL VP_VAL1
 
         NP_SG -> NP_SG PR_DEF VP_F2
-        NP_PL -> NP_PL DEF VP
+        NP_PL -> NP_PL PR_DEF VP
         NP_SG -> NP_SG PR_DEF NP_SG VP_F2
         NP_SG -> NP_SG PR_DEF NP_PL VP
         NP_PL -> NP_SG PR_DEF NP_SG VP_F2

@@ -35,15 +35,19 @@ if __name__ == "__main__":
 
   g = load_grammar(open(grammar_file_name)) 
 
-  for fname in os.listdir('.'):
+  for fname in sorted(os.listdir('.')):
     if not os.path.isfile(fname):
       continue
-    result, bad_lines = True, []
+    result, lines, bad_lines = True, [], []
     if re.match('.*_ok$', fname):
-      result, bad_lines = check_file(g, readlines(fname), True)
+      lines = readlines(fname)
+      result, bad_lines = check_file(g, lines, True)
     elif re.match('.*_fail$', fname):
-      result, bad_lines = check_file(g, readlines(fname), False)
-    if not result:
-      print "%s Fail: "%fname, bad_lines
-
+      lines = readlines(fname)
+      result, bad_lines = check_file(g, lines, False)
+    if len(lines):
+      if not result:
+        print "%s Fail %d of %d: "%(fname, len(bad_lines), len(lines)), bad_lines
+      else:
+        print "%s OK %s of %d"%(fname, len(lines) - len(bad_lines), len(lines))
 
